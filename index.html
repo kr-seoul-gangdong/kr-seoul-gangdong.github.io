@@ -117,35 +117,566 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "강동구의 인구는 2023년 기준 약 45만 9천여 명으로, 둔촌·고덕 일대의 대규모 재건축 입주가 이어지며 서울에서 인구가 가장 빠르게 늘어나는 자치구 중 하나로 꼽힙니다. 전통적으로 천호동·성내동을 중심으로 한 상업 기능과 둔촌·고덕·명일의 주거 기능이 뚜렷이 나뉘어 있으며, 근래에는 고덕비즈밸리 자족업무단지가 조성되어 유통·지식산업센터 등 자족 기능이 강화되고 있습니다. 둔촌주공을 재건축한 올림픽파크포레온은 1만 2천여 세대로 국내 최대 아파트 단지라는 상징성을 지녀 강동구 부동산과 도시 개발의 중심축이 되었습니다. 강동경희대병원과 강동성심병원 등 대형 종합병원이 밀집해 서울 동부권 의료 거점 역할을 하며, 강동아트센터·온조대왕문화체육관 등 문화·체육 인프라도 촘촘합니다. 대체로 아파트 위주의 정주형 주거지 성격이 강하면서도, 선사문화라는 뚜렷한 지역 정체성을 도시 브랜드로 적극 활용하는 점이 다른 자치구와 구별됩니다.",
+  "coords": {
+    "lat": 37.5301,
+    "lng": 127.1238
+  },
+  "cultural_heritage": [
+    {
+      "description": "암사동 유적 내에 자리한 신석기 전문 박물관으로, 빗살무늬토기·갈돌 등 출토 유물과 복원 움집을 전시한다. 유네스코 세계유산 등재를 추진하며 선사 취락 연구와 체험학습의 거점 역할을 한다.",
+      "name": "암사동 선사유적박물관"
+    },
+    {
+      "description": "매년 가을 암사동 유적 일대에서 열리는 강동구 대표 브랜드 축제로, 서울에서 유일하게 선사시대를 주제로 삼는다. 불 피우기·토기 만들기 등 선사인의 생활을 재현한 체험 프로그램이 인기를 끈다.",
+      "name": "강동선사문화축제"
+    },
+    {
+      "description": "서울특별시 유형문화재로 지정된 조선시대 사대부 묘역으로, 강동구 일대에 세거한 광주 이씨 문중의 역사를 보여준다. 문인석과 묘비 등 조선 분묘 양식을 잘 간직하고 있다.",
+      "name": "광주 이씨 광릉부원군파 묘역"
+    },
+    {
+      "description": "백제 시조 온조왕의 이름을 딴 강동구 대표 실내체육·문화시설로 고덕로에 위치한다. 수영장과 대체육관, 공연이 가능한 다목적 공간을 갖춰 주민 생활체육과 문화 활동의 중심지가 된다.",
+      "name": "온조대왕문화체육관"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "6천 년 전 신석기 취락을 복원한 서울 암사동 유적이 가장 대표적입니다. 선사공원과 박물관에서 빗살무늬토기와 움집을 직접 볼 수 있고, 매년 가을에는 강동선사문화축제가 열립니다.",
+      "question": "강동구를 대표하는 관광지는 어디인가요?"
+    },
+    {
+      "answer": "강동구청은 성내동 성내로 25에 위치합니다. 서울 지하철 8호선 강동구청역에서 바로 연결되어 대중교통 접근이 편리합니다.",
+      "question": "강동구청은 어디에 있고 어떻게 가나요?"
+    },
+    {
+      "answer": "둔촌주공아파트를 재건축한 약 1만 2천 세대 규모의 국내 최대 아파트 단지입니다. 올림픽공원과 가까워 강동구 남부 주거·개발의 중심으로 꼽힙니다.",
+      "question": "올림픽파크포레온은 어떤 곳인가요?"
+    },
+    {
+      "answer": "일자산 허브천문공원과 강동그린웨이 둘레길, 광나루한강공원이 대표적입니다. 허브천문공원은 밤에 별자리 조명이 켜져 야간 산책 명소로도 인기가 많습니다.",
+      "question": "강동구에서 가족과 산책하기 좋은 곳은 어디인가요?"
+    },
+    {
+      "answer": "5호선, 8호선, 9호선이 지나며 천호역과 강동역이 주요 환승역입니다. 5호선 상일동에서 이어지는 하남선으로 하남 미사 방면 이동도 편리합니다.",
+      "question": "강동구에는 어떤 지하철 노선이 지나나요?"
+    },
+    {
+      "answer": "1979년 강남구에서 분리 신설될 때 '한강의 동쪽에 위치한다'는 뜻에서 강동(江東)이라는 이름이 붙었습니다. 옛 지명은 조선시대 광주군 구천면이었습니다.",
+      "question": "강동구 이름은 어떻게 유래했나요?"
+    }
+  ],
+  "geography_nature": "강동구는 서울의 최동단에 자리해 한강을 서쪽 경계로 광진구와 마주하고, 북쪽으로는 아차산 자락을 사이에 두고 경기도 구리시, 동쪽으로는 하남시, 남쪽으로는 송파구와 맞닿아 있습니다. 면적은 약 24.6㎢로, 한강 본류가 광나루에서 시작해 미사·강일 방향으로 크게 휘어 흐르며 넓은 저지대 충적평야를 남겨 예로부터 농경과 취락에 유리했습니다. 지형은 대체로 평탄하나 남동쪽으로 해발 130여 미터의 일자산이 하남·송파와의 경계를 따라 남북으로 길게 뻗어 있고, 북쪽에는 아차산과 고덕산의 낮은 구릉이 녹지축을 이룹니다. 고덕동 한강변에는 버드나무 군락과 습지로 이루어진 고덕수변생태공원이 있어 도심 속 자연 하천 생태를 보존합니다. 이처럼 한강의 물길과 일자산·아차산의 산줄기가 만나 강과 산이 도시를 감싸는 배산임수의 지세를 형성하고 있습니다.",
+  "history": "강동구 일대는 조선시대 광주군 구천면에 속했으며, '구천'이라는 지명은 성종 때 판중추부사를 지낸 어효첨의 호에서 비롯된 것으로 전해집니다. 이보다 훨씬 앞서 이 땅은 신석기시대부터 사람이 살던 곳으로, 1925년 을축년 대홍수 때 한강변 모래가 씻겨나가면서 암사동의 빗살무늬토기와 움집터가 세상에 드러나 선사 취락의 실체가 확인되었습니다. 백제 초기에는 위례성 세력권의 배후지로 온조왕 전설과 얽혀 있어, 오늘날 온조대왕문화체육관이라는 이름에도 그 기억이 남아 있습니다. 현대 행정구역으로서의 강동구는 1979년 10월 1일 강남구에서 분리되어 18개 행정동으로 신설되었고, '한강의 동쪽에 위치한다' 하여 강동(江東)이라는 구명을 얻었습니다. 1988년에는 남쪽 일부가 송파구로 다시 분리되어 오늘의 경계가 자리잡았습니다. 이후 둔촌주공·고덕주공 등 대규모 저층 아파트 단지가 조성되었고, 2020년대 들어 이들이 잇따라 재건축되며 인구 구조와 도시 경관이 크게 바뀌었습니다.",
+  "intro": "강동구는 한강이 서울을 빠져나가기 직전 마지막으로 감싸 도는 서울의 동쪽 관문으로, 기원전 4000년경 신석기인이 빗살무늬토기를 빚으며 첫 정착지를 이룬 암사동 유적의 고장입니다. 6천 년 전 강변 취락에서 시작된 삶의 흔적이 오늘날 1만 2천여 세대 규모의 초대형 아파트 단지 올림픽파크포레온과 한 지역 안에 공존하는, 선사와 첨단이 겹쳐진 독특한 도시입니다. 매화(구화)와 잣나무(구목), 종달새(구조)를 상징으로 삼아 강변의 온화함과 생태의 푸르름을 함께 담아냈습니다. 천호동 로데오거리의 활기, 고덕비즈밸리의 자족 업무단지, 강동경희대병원을 중심으로 한 의료 인프라가 어우러져 주거·상업·산업이 균형을 이룹니다. 서울 25개 자치구 가운데 가장 늦게까지 넓은 미개발지를 품고 있어 재건축과 도시재생으로 빠르게 변모하는 현재진행형의 구이기도 합니다.",
+  "landmarks": [
+    {
+      "description": "기원전 4000년경 신석기시대 한강변 최대 규모의 마을 유적으로, 사적 제267호이다. 복원된 움집과 빗살무늬토기 출토지를 갖춘 선사공원과 두 개의 박물관에서 6천 년 전 강동 사람들의 삶을 체험할 수 있다.",
+      "name": "서울 암사동 유적"
+    },
+    {
+      "description": "둔촌동에 들어선 총 1만 2천여 세대의 국내 최대 아파트 단지로, '단군 이래 최대 재건축'으로 불렸다. 올림픽공원과 인접해 있으며 강동구 도시 경관과 부동산 시장의 새로운 상징이 되었다.",
+      "name": "올림픽파크포레온(둔촌주공 재건축)"
+    },
+    {
+      "description": "천호역 일대에 형성된 강동구 최대의 상업·쇼핑 거리로, 패션 매장과 먹자골목, 대형 백화점이 밀집해 있다. 동부 서울의 대표적인 도심 상권으로 밤낮없이 활기가 넘친다.",
+      "name": "천호동 로데오거리"
+    },
+    {
+      "description": "명일근린공원 자락 상일동에 위치한 전문 공연장으로 대극장·소극장과 갤러리를 갖추고 있다. 숲으로 둘러싸인 문화 공간에서 연극·무용·클래식 등 다양한 공연이 열린다.",
+      "name": "강동아트센터"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "일자산 능선에 조성된 공원으로 허브원·자생원과 관천대, 전망데크를 갖추고 있다. 밤이면 바닥에 설치된 282개의 별자리 조명이 켜져 도심 속에서 별과 허브 향을 함께 즐길 수 있는 힐링 명소다.",
+      "name": "일자산 허브천문공원"
+    },
+    {
+      "description": "일자산을 중심으로 둔촌동 생태경관보전지역, 허브천문공원, 길동생태공원을 잇는 약 3km의 숲길 둘레길이다. 울창한 참나무 숲 사이로 이어지는 완만한 흙길이라 남녀노소 걷기 좋은 산책 코스로 사랑받는다.",
+      "name": "강동그린웨이(일자산 둘레길)"
+    },
+    {
+      "description": "한강변 광나루지구에 조성된 시민공원으로 자전거도로, 잔디밭, 물놀이장과 서울시 유일의 자전거공원을 갖추고 있다. 아차산을 배경으로 한강을 조망하며 여가를 즐기기에 좋다.",
+      "name": "광나루한강공원"
+    },
+    {
+      "description": "습지와 저수지, 초지가 어우러진 도심 생태 학습장으로 다양한 새와 곤충, 수생식물을 관찰할 수 있다. 예약제로 운영되는 자연 관찰 프로그램이 있어 어린이 환경 교육의 장으로 활용된다.",
+      "name": "길동생태공원"
+    }
+  ],
+  "org_slug": "kr-seoul-gangdong",
+  "sido": "서울특별시",
+  "sigungu": "강동구",
+  "symbols": {
+    "bird": "종달새",
+    "flower": "매화",
+    "tree": "잣나무"
+  },
+  "transport": "강동구는 서울 지하철 5호선이 관통하는 교통의 축으로, 5호선은 천호·강동·길동·굽은다리·명일·고덕역을 지나 상일동 방향 본선과 둔촌동 방향 마천지선으로 갈라집니다. 8호선은 암사역을 기점으로 강동구청역·천호역을 지나며, 이 가운데 천호역과 강동역은 각각 5·8호선과 5호선이 만나는 환승 거점입니다. 9호선은 둔촌오륜역과 중앙보훈병원역을 통해 강동 남부를 잇고, 5호선 상일동에서 이어지는 하남선 연장으로 하남 미사·풍산 방면 접근성도 크게 좋아졌습니다. 도로 교통은 천호대로와 올림픽대로가 동서를 관통하고, 강일IC를 통해 서울양양고속도로와 수도권제1순환고속도로로 직접 연결되어 수도권 동부 광역 이동이 편리합니다. 한강을 건너는 광진교와 천호대교가 광진구·성동 방면을 이어 강북 도심과의 접근성도 확보하고 있습니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">서울특별시</p>
-      <h1>강동구</h1>
-    </header>
-    <div class="content">
-      <section id="intro">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Gowun+Dodum&family=Gowun+Batang:wght@400;700&display=swap');
+
+  :root{
+    --gd-green:#2E5A27;
+    --gd-brown:#8B5A2B;
+    --gd-paper:#faf5ea;
+    --gd-paper2:#f2e9d6;
+    --gd-ink:#2c2618;
+    --gd-line:#e2d4b7;
+    --gd-round:16px;
+    --gd-shadow:0 24px 60px rgba(46,45,27,.28);
+  }
+
+  *{box-sizing:border-box;}
+
+  .gd-book-wrap{
+    font-family:'Gowun Dodum','Quicksand',-apple-system,'Malgun Gothic',sans-serif;
+    color:var(--gd-ink);
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #3a6f31 0%, transparent 55%),
+      radial-gradient(900px 500px at 95% 110%, #7a4d24 0%, transparent 50%),
+      linear-gradient(160deg,#20401c 0%, #163011 60%, #221607 100%);
+    min-height:100vh;
+    margin:0;
+    padding:clamp(16px,4vw,48px);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- Book title header ---------- */
+  .gd-masthead{
+    max-width:1180px;margin:0 auto clamp(18px,3vw,34px);
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;
+    color:#f6efdd;
+  }
+  .gd-kicker{
+    font-family:'Quicksand',sans-serif;font-weight:600;letter-spacing:.4em;
+    text-transform:uppercase;font-size:.72rem;color:#c9e3bf;opacity:.85;
+    padding:6px 16px;border:1px solid rgba(201,227,191,.35);border-radius:999px;
+  }
+  .gd-masthead h1{
+    margin:.2em 0 0;font-family:'Gowun Batang',serif;font-weight:700;
+    font-size:clamp(1.8rem,5vw,3rem);letter-spacing:-.01em;
+    text-shadow:0 2px 20px rgba(0,0,0,.35);
+  }
+  .gd-masthead h1 span{color:#e8c48f;}
+  .gd-subtitle{font-size:.95rem;color:#dfe8d3;max-width:640px;opacity:.9;}
+
+  /* ---------- The book stage ---------- */
+  .gd-stage{
+    max-width:1180px;margin:0 auto;
+    perspective:2600px;
+    perspective-origin:50% 40%;
+  }
+
+  .gd-book{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/10;
+    min-height:520px;
+    transform-style:preserve-3d;
+    background:linear-gradient(180deg,#563a1e,#3d2813);
+    border-radius:10px var(--gd-round) var(--gd-round) 10px;
+    box-shadow:var(--gd-shadow);
+    padding:16px;
+  }
+  /* leather spine */
+  .gd-book::before{
+    content:"";position:absolute;left:6px;top:14px;bottom:14px;width:26px;
+    background:linear-gradient(90deg,#2b1c0d,#553a1d 60%,#2b1c0d);
+    border-radius:6px;box-shadow:inset 0 0 12px rgba(0,0,0,.6);
+  }
+
+  .gd-pages{
+    position:relative;width:100%;height:100%;
+    transform-style:preserve-3d;
+  }
+
+  .gd-page{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(90deg, rgba(0,0,0,.06), transparent 8%, transparent 92%, rgba(0,0,0,.05)),
+      linear-gradient(180deg,var(--gd-paper),var(--gd-paper2));
+    border-radius:6px var(--gd-round) var(--gd-round) 6px;
+    padding:clamp(22px,3.4vw,46px) clamp(24px,4vw,60px);
+    overflow:auto;
+    transform-style:preserve-3d;
+    backface-visibility:hidden;
+    box-shadow:inset 22px 0 40px -28px rgba(80,55,20,.7);
+    scrollbar-width:thin;scrollbar-color:var(--gd-brown) transparent;
+  }
+  .gd-page::-webkit-scrollbar{width:8px;}
+  .gd-page::-webkit-scrollbar-thumb{background:var(--gd-brown);border-radius:8px;}
+
+  /* JS-enhanced flip transitions applied only when .gd-js is present */
+  .gd-js .gd-page{
+    transition:transform .85s cubic-bezier(.62,.05,.28,1), box-shadow .85s ease;
+    transform-origin:left center;
+    will-change:transform;
+  }
+  .gd-js .gd-page.is-flipped{
+    transform:rotateY(-176deg);
+    box-shadow:inset -22px 0 40px -28px rgba(80,55,20,.7);
+  }
+  /* stacking: current & neighbours on top */
+  .gd-js .gd-page{z-index:1;}
+  .gd-js .gd-page.is-flipped{z-index:2;}
+  .gd-js .gd-page.is-current{z-index:20;}
+
+  /* When JS is OFF: pages simply stack vertically, all readable */
+  .gd-nojs .gd-pages{height:auto;}
+  .gd-nojs .gd-page{
+    position:relative;inset:auto;margin-bottom:14px;height:auto;min-height:0;
+    border-radius:var(--gd-round);
+  }
+
+  /* ---------- Page inner content styling ---------- */
+  .gd-page-inner{max-width:64ch;margin:0 auto;}
+  .gd-folio{
+    font-family:'Quicksand',sans-serif;font-weight:600;font-size:.72rem;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--gd-brown);
+    display:flex;align-items:center;gap:12px;margin-bottom:14px;
+  }
+  .gd-folio::after{content:"";flex:1;height:1px;background:var(--gd-line);}
+
+  /* Style the injected       <section id="intro">
+        <h2>지역 소개</h2>
+        <p>강동구는 한강이 서울을 빠져나가기 직전 마지막으로 감싸 도는 서울의 동쪽 관문으로, 기원전 4000년경 신석기인이 빗살무늬토기를 빚으며 첫 정착지를 이룬 암사동 유적의 고장입니다. 6천 년 전 강변 취락에서 시작된 삶의 흔적이 오늘날 1만 2천여 세대 규모의 초대형 아파트 단지 올림픽파크포레온과 한 지역 안에 공존하는, 선사와 첨단이 겹쳐진 독특한 도시입니다. 매화(구화)와 잣나무(구목), 종달새(구조)를 상징으로 삼아 강변의 온화함과 생태의 푸르름을 함께 담아냈습니다. 천호동 로데오거리의 활기, 고덕비즈밸리의 자족 업무단지, 강동경희대병원을 중심으로 한 의료 인프라가 어우러져 주거·상업·산업이 균형을 이룹니다. 서울 25개 자치구 가운데 가장 늦게까지 넓은 미개발지를 품고 있어 재건축과 도시재생으로 빠르게 변모하는 현재진행형의 구이기도 합니다.</p>
+      </section>
+      <section id="facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 459,167명 (2023)</li>
+          <li>면적: 24.6 km²</li>
+          <li>신설: 1979-10-01</li>
+        </ul>
+      </section>
+      <section id="history">
+        <h2>역사</h2>
+        <p>강동구 일대는 조선시대 광주군 구천면에 속했으며, &#x27;구천&#x27;이라는 지명은 성종 때 판중추부사를 지낸 어효첨의 호에서 비롯된 것으로 전해집니다. 이보다 훨씬 앞서 이 땅은 신석기시대부터 사람이 살던 곳으로, 1925년 을축년 대홍수 때 한강변 모래가 씻겨나가면서 암사동의 빗살무늬토기와 움집터가 세상에 드러나 선사 취락의 실체가 확인되었습니다. 백제 초기에는 위례성 세력권의 배후지로 온조왕 전설과 얽혀 있어, 오늘날 온조대왕문화체육관이라는 이름에도 그 기억이 남아 있습니다. 현대 행정구역으로서의 강동구는 1979년 10월 1일 강남구에서 분리되어 18개 행정동으로 신설되었고, &#x27;한강의 동쪽에 위치한다&#x27; 하여 강동(江東)이라는 구명을 얻었습니다. 1988년에는 남쪽 일부가 송파구로 다시 분리되어 오늘의 경계가 자리잡았습니다. 이후 둔촌주공·고덕주공 등 대규모 저층 아파트 단지가 조성되었고, 2020년대 들어 이들이 잇따라 재건축되며 인구 구조와 도시 경관이 크게 바뀌었습니다.</p>
+      </section>
+      <section id="geography">
+        <h2>지리·자연환경</h2>
+        <p>강동구는 서울의 최동단에 자리해 한강을 서쪽 경계로 광진구와 마주하고, 북쪽으로는 아차산 자락을 사이에 두고 경기도 구리시, 동쪽으로는 하남시, 남쪽으로는 송파구와 맞닿아 있습니다. 면적은 약 24.6㎢로, 한강 본류가 광나루에서 시작해 미사·강일 방향으로 크게 휘어 흐르며 넓은 저지대 충적평야를 남겨 예로부터 농경과 취락에 유리했습니다. 지형은 대체로 평탄하나 남동쪽으로 해발 130여 미터의 일자산이 하남·송파와의 경계를 따라 남북으로 길게 뻗어 있고, 북쪽에는 아차산과 고덕산의 낮은 구릉이 녹지축을 이룹니다. 고덕동 한강변에는 버드나무 군락과 습지로 이루어진 고덕수변생태공원이 있어 도심 속 자연 하천 생태를 보존합니다. 이처럼 한강의 물길과 일자산·아차산의 산줄기가 만나 강과 산이 도시를 감싸는 배산임수의 지세를 형성하고 있습니다.</p>
+      </section>
+      <section id="characteristics">
+        <h2>지역 특징</h2>
+        <p>강동구의 인구는 2023년 기준 약 45만 9천여 명으로, 둔촌·고덕 일대의 대규모 재건축 입주가 이어지며 서울에서 인구가 가장 빠르게 늘어나는 자치구 중 하나로 꼽힙니다. 전통적으로 천호동·성내동을 중심으로 한 상업 기능과 둔촌·고덕·명일의 주거 기능이 뚜렷이 나뉘어 있으며, 근래에는 고덕비즈밸리 자족업무단지가 조성되어 유통·지식산업센터 등 자족 기능이 강화되고 있습니다. 둔촌주공을 재건축한 올림픽파크포레온은 1만 2천여 세대로 국내 최대 아파트 단지라는 상징성을 지녀 강동구 부동산과 도시 개발의 중심축이 되었습니다. 강동경희대병원과 강동성심병원 등 대형 종합병원이 밀집해 서울 동부권 의료 거점 역할을 하며, 강동아트센터·온조대왕문화체육관 등 문화·체육 인프라도 촘촘합니다. 대체로 아파트 위주의 정주형 주거지 성격이 강하면서도, 선사문화라는 뚜렷한 지역 정체성을 도시 브랜드로 적극 활용하는 점이 다른 자치구와 구별됩니다.</p>
+      </section>
+      <section id="landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>서울 암사동 유적</strong> — 기원전 4000년경 신석기시대 한강변 최대 규모의 마을 유적으로, 사적 제267호이다. 복원된 움집과 빗살무늬토기 출토지를 갖춘 선사공원과 두 개의 박물관에서 6천 년 전 강동 사람들의 삶을 체험할 수 있다.</li>
+          <li><strong>올림픽파크포레온(둔촌주공 재건축)</strong> — 둔촌동에 들어선 총 1만 2천여 세대의 국내 최대 아파트 단지로, &#x27;단군 이래 최대 재건축&#x27;으로 불렸다. 올림픽공원과 인접해 있으며 강동구 도시 경관과 부동산 시장의 새로운 상징이 되었다.</li>
+          <li><strong>천호동 로데오거리</strong> — 천호역 일대에 형성된 강동구 최대의 상업·쇼핑 거리로, 패션 매장과 먹자골목, 대형 백화점이 밀집해 있다. 동부 서울의 대표적인 도심 상권으로 밤낮없이 활기가 넘친다.</li>
+          <li><strong>강동아트센터</strong> — 명일근린공원 자락 상일동에 위치한 전문 공연장으로 대극장·소극장과 갤러리를 갖추고 있다. 숲으로 둘러싸인 문화 공간에서 연극·무용·클래식 등 다양한 공연이 열린다.</li>
+        </ul>
+      </section>
+      <section id="heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>암사동 선사유적박물관</strong> — 암사동 유적 내에 자리한 신석기 전문 박물관으로, 빗살무늬토기·갈돌 등 출토 유물과 복원 움집을 전시한다. 유네스코 세계유산 등재를 추진하며 선사 취락 연구와 체험학습의 거점 역할을 한다.</li>
+          <li><strong>강동선사문화축제</strong> — 매년 가을 암사동 유적 일대에서 열리는 강동구 대표 브랜드 축제로, 서울에서 유일하게 선사시대를 주제로 삼는다. 불 피우기·토기 만들기 등 선사인의 생활을 재현한 체험 프로그램이 인기를 끈다.</li>
+          <li><strong>광주 이씨 광릉부원군파 묘역</strong> — 서울특별시 유형문화재로 지정된 조선시대 사대부 묘역으로, 강동구 일대에 세거한 광주 이씨 문중의 역사를 보여준다. 문인석과 묘비 등 조선 분묘 양식을 잘 간직하고 있다.</li>
+          <li><strong>온조대왕문화체육관</strong> — 백제 시조 온조왕의 이름을 딴 강동구 대표 실내체육·문화시설로 고덕로에 위치한다. 수영장과 대체육관, 공연이 가능한 다목적 공간을 갖춰 주민 생활체육과 문화 활동의 중심지가 된다.</li>
+        </ul>
+      </section>
+      <section id="nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>일자산 허브천문공원</strong> — 일자산 능선에 조성된 공원으로 허브원·자생원과 관천대, 전망데크를 갖추고 있다. 밤이면 바닥에 설치된 282개의 별자리 조명이 켜져 도심 속에서 별과 허브 향을 함께 즐길 수 있는 힐링 명소다.</li>
+          <li><strong>강동그린웨이(일자산 둘레길)</strong> — 일자산을 중심으로 둔촌동 생태경관보전지역, 허브천문공원, 길동생태공원을 잇는 약 3km의 숲길 둘레길이다. 울창한 참나무 숲 사이로 이어지는 완만한 흙길이라 남녀노소 걷기 좋은 산책 코스로 사랑받는다.</li>
+          <li><strong>광나루한강공원</strong> — 한강변 광나루지구에 조성된 시민공원으로 자전거도로, 잔디밭, 물놀이장과 서울시 유일의 자전거공원을 갖추고 있다. 아차산을 배경으로 한강을 조망하며 여가를 즐기기에 좋다.</li>
+          <li><strong>길동생태공원</strong> — 습지와 저수지, 초지가 어우러진 도심 생태 학습장으로 다양한 새와 곤충, 수생식물을 관찰할 수 있다. 예약제로 운영되는 자연 관찰 프로그램이 있어 어린이 환경 교육의 장으로 활용된다.</li>
+        </ul>
+      </section>
+      <section id="transport">
+        <h2>교통</h2>
+        <p>강동구는 서울 지하철 5호선이 관통하는 교통의 축으로, 5호선은 천호·강동·길동·굽은다리·명일·고덕역을 지나 상일동 방향 본선과 둔촌동 방향 마천지선으로 갈라집니다. 8호선은 암사역을 기점으로 강동구청역·천호역을 지나며, 이 가운데 천호역과 강동역은 각각 5·8호선과 5호선이 만나는 환승 거점입니다. 9호선은 둔촌오륜역과 중앙보훈병원역을 통해 강동 남부를 잇고, 5호선 상일동에서 이어지는 하남선 연장으로 하남 미사·풍산 방면 접근성도 크게 좋아졌습니다. 도로 교통은 천호대로와 올림픽대로가 동서를 관통하고, 강일IC를 통해 서울양양고속도로와 수도권제1순환고속도로로 직접 연결되어 수도권 동부 광역 이동이 편리합니다. 한강을 건너는 광진교와 천호대교가 광진구·성동 방면을 이어 강북 도심과의 접근성도 확보하고 있습니다.</p>
+      </section>
+      <section id="symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 매화</li>
+          <li>구목(나무): 잣나무</li>
+          <li>구조(새): 종달새</li>
+        </ul>
+      </section>
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>강동구를 대표하는 관광지는 어디인가요?</summary>
+            <p>6천 년 전 신석기 취락을 복원한 서울 암사동 유적이 가장 대표적입니다. 선사공원과 박물관에서 빗살무늬토기와 움집을 직접 볼 수 있고, 매년 가을에는 강동선사문화축제가 열립니다.</p>
+          </details>
+          <details>
+            <summary>강동구청은 어디에 있고 어떻게 가나요?</summary>
+            <p>강동구청은 성내동 성내로 25에 위치합니다. 서울 지하철 8호선 강동구청역에서 바로 연결되어 대중교통 접근이 편리합니다.</p>
+          </details>
+          <details>
+            <summary>올림픽파크포레온은 어떤 곳인가요?</summary>
+            <p>둔촌주공아파트를 재건축한 약 1만 2천 세대 규모의 국내 최대 아파트 단지입니다. 올림픽공원과 가까워 강동구 남부 주거·개발의 중심으로 꼽힙니다.</p>
+          </details>
+          <details>
+            <summary>강동구에서 가족과 산책하기 좋은 곳은 어디인가요?</summary>
+            <p>일자산 허브천문공원과 강동그린웨이 둘레길, 광나루한강공원이 대표적입니다. 허브천문공원은 밤에 별자리 조명이 켜져 야간 산책 명소로도 인기가 많습니다.</p>
+          </details>
+          <details>
+            <summary>강동구에는 어떤 지하철 노선이 지나나요?</summary>
+            <p>5호선, 8호선, 9호선이 지나며 천호역과 강동역이 주요 환승역입니다. 5호선 상일동에서 이어지는 하남선으로 하남 미사 방면 이동도 편리합니다.</p>
+          </details>
+          <details>
+            <summary>강동구 이름은 어떻게 유래했나요?</summary>
+            <p>1979년 강남구에서 분리 신설될 때 &#x27;한강의 동쪽에 위치한다&#x27;는 뜻에서 강동(江東)이라는 이름이 붙었습니다. 옛 지명은 조선시대 광주군 구천면이었습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.gangdong.go.kr" rel="noopener">강동구청 공식 홈페이지</a></li>
+          <li><a href="https://www.gangdong.go.kr/web/culture" rel="noopener">강동문화포털</a></li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EB%8F%99%EA%B5%AC" rel="noopener">강동구 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://ko.wikipedia.org/wiki/%EC%84%9C%EC%9A%B8_%EC%95%94%EC%82%AC%EB%8F%99_%EC%9C%A0%EC%A0%81" rel="noopener">서울 암사동 유적 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.gangdong.go.kr/web/culture/contents/gdc010_020_030" rel="noopener">일자산 허브천문공원 - 강동문화포털</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.gangdong.go.kr/web/newportal/contents/gdp_005_007_010_002_001" rel="noopener">고덕비즈밸리 사업개요 - 강동구청</a> (조회 2026-07-08)</li>
+        </ul>
+      </section> sections as book leaves */
+  .gd-content section{
+    margin:0 0 30px;
+    scroll-margin-top:20px;
+  }
+  .gd-content section:last-child{margin-bottom:0;}
+  .gd-content h2{
+    font-family:'Gowun Batang',serif;font-weight:700;
+    color:var(--gd-green);font-size:clamp(1.25rem,2.6vw,1.7rem);
+    margin:0 0 .5em;line-height:1.3;position:relative;padding-left:18px;
+  }
+  .gd-content h2::before{
+    content:"";position:absolute;left:0;top:.15em;bottom:.15em;width:6px;
+    border-radius:4px;background:linear-gradient(180deg,var(--gd-green),var(--gd-brown));
+  }
+  .gd-content h3{font-family:'Gowun Batang',serif;color:var(--gd-brown);font-size:1.05rem;margin:1.2em 0 .4em;}
+  .gd-content p{margin:0 0 1em;font-size:1rem;color:#3a3323;}
+  .gd-content a{color:var(--gd-green);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gd-line);}
+  .gd-content a:hover{text-decoration-color:var(--gd-green);}
+  .gd-content ul,.gd-content ol{margin:0 0 1em;padding-left:1.3em;}
+  .gd-content li{margin:.3em 0;}
+
+  /* facts / symbols as rounded cards */
+  .gd-content .facts,.gd-content .symbols{
+    list-style:none;padding:0;margin:0 0 1em;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;
+  }
+  .gd-content .facts li,.gd-content .symbols li{
+    background:#fff;border:1px solid var(--gd-line);border-radius:var(--gd-round);
+    padding:12px 16px;margin:0;box-shadow:0 4px 14px rgba(139,90,43,.08);
+    font-size:.92rem;
+  }
+  .gd-content .facts strong,.gd-content .symbols strong{color:var(--gd-green);display:block;font-size:.78rem;letter-spacing:.04em;margin-bottom:2px;text-transform:uppercase;font-family:'Quicksand',sans-serif;}
+
+  /* faq details */
+  .gd-content .faq{margin:0;}
+  .gd-content .faq details{
+    background:#fff;border:1px solid var(--gd-line);border-radius:var(--gd-round);
+    padding:4px 18px;margin:0 0 10px;box-shadow:0 4px 14px rgba(46,90,39,.06);
+  }
+  .gd-content .faq summary{
+    cursor:pointer;font-weight:700;color:var(--gd-green);padding:12px 0;
+    font-family:'Gowun Batang',serif;list-style:none;position:relative;padding-right:28px;
+  }
+  .gd-content .faq summary::-webkit-details-marker{display:none;}
+  .gd-content .faq summary::after{
+    content:"+";position:absolute;right:0;top:10px;font-size:1.3rem;color:var(--gd-brown);
+    transition:transform .3s ease;
+  }
+  .gd-content .faq details[open] summary::after{transform:rotate(45deg);}
+  .gd-content .faq details p{padding:0 0 12px;margin:0;}
+
+  /* ---------- Controls ---------- */
+  .gd-controls{
+    max-width:1180px;margin:20px auto 0;
+    display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;
+  }
+  .gd-btn{
+    font-family:'Quicksand',sans-serif;font-weight:600;
+    background:#f6efdd;color:var(--gd-green);border:none;cursor:pointer;
+    width:54px;height:54px;border-radius:50%;font-size:1.4rem;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);transition:transform .2s,background .2s;
+    display:grid;place-items:center;
+  }
+  .gd-btn:hover{transform:translateY(-2px);background:#fff;}
+  .gd-btn:active{transform:translateY(0) scale(.96);}
+  .gd-btn:disabled{opacity:.35;cursor:default;transform:none;}
+  .gd-progress{
+    color:#eadfc7;font-family:'Quicksand',sans-serif;font-weight:600;
+    min-width:64px;text-align:center;letter-spacing:.06em;
+  }
+  .gd-chapters{
+    max-width:1180px;margin:14px auto 0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  }
+  .gd-chip{
+    font-family:'Quicksand',sans-serif;font-size:.78rem;font-weight:600;
+    background:rgba(255,255,255,.1);color:#e9dfc6;border:1px solid rgba(255,255,255,.2);
+    padding:6px 14px;border-radius:999px;cursor:pointer;transition:.2s;
+  }
+  .gd-chip:hover,.gd-chip.active{background:#e8c48f;color:#3a2812;border-color:#e8c48f;}
+
+  .gd-hint{
+    text-align:center;color:#cdbf9f;font-family:'Quicksand',sans-serif;
+    font-size:.78rem;margin:16px auto 0;max-width:1180px;opacity:.8;
+  }
+
+  /* JS-only chrome hidden until enhancement kicks in */
+  .gd-nojs .gd-controls,.gd-nojs .gd-chapters,.gd-nojs .gd-hint,.gd-nojs .gd-folio{display:none;}
+
+  @media (max-width:720px){
+    .gd-book{aspect-ratio:auto;min-height:0;padding:10px;}
+    .gd-js .gd-book{min-height:600px;}
+    .gd-book::before{display:none;}
+    .gd-page{padding:22px 20px;}
+    .gd-content .facts,.gd-content .symbols{grid-template-columns:1fr 1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .gd-js .gd-page{transition:opacity .3s ease;}
+    .gd-js .gd-page.is-flipped{transform:none;}
+  }
+</style>
+
+<div class="gd-book-wrap gd-nojs" id="gd-root">
+
+  <header class="gd-masthead">
+    <span class="gd-kicker">서울특별시 · Field Book</span>
+    <h1>강동구 <span>펼침책</span></h1>
+    <p class="gd-subtitle">한강이 굽이도는 서울의 동쪽 관문, 강동구을(를) 한 장 한 장 넘기며 읽는 지역 안내서. 좌우로 책장을 넘겨 아홉 개의 이야기를 만나 보세요.</p>
+  </header>
+
+  <main class="gd-stage">
+    <div class="gd-book">
+      <div class="gd-pages" id="gd-pages">
+        <!-- Cover leaf (JS enhancement only; text duplicated for atmosphere, content lives below) -->
+        <!-- The real 9 sections are injected via       <section id="intro">
+        <h2>지역 소개</h2>
+        <p>강동구는 한강이 서울을 빠져나가기 직전 마지막으로 감싸 도는 서울의 동쪽 관문으로, 기원전 4000년경 신석기인이 빗살무늬토기를 빚으며 첫 정착지를 이룬 암사동 유적의 고장입니다. 6천 년 전 강변 취락에서 시작된 삶의 흔적이 오늘날 1만 2천여 세대 규모의 초대형 아파트 단지 올림픽파크포레온과 한 지역 안에 공존하는, 선사와 첨단이 겹쳐진 독특한 도시입니다. 매화(구화)와 잣나무(구목), 종달새(구조)를 상징으로 삼아 강변의 온화함과 생태의 푸르름을 함께 담아냈습니다. 천호동 로데오거리의 활기, 고덕비즈밸리의 자족 업무단지, 강동경희대병원을 중심으로 한 의료 인프라가 어우러져 주거·상업·산업이 균형을 이룹니다. 서울 25개 자치구 가운데 가장 늦게까지 넓은 미개발지를 품고 있어 재건축과 도시재생으로 빠르게 변모하는 현재진행형의 구이기도 합니다.</p>
+      </section>
+      <section id="facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 459,167명 (2023)</li>
+          <li>면적: 24.6 km²</li>
+          <li>신설: 1979-10-01</li>
+        </ul>
+      </section>
+      <section id="history">
+        <h2>역사</h2>
+        <p>강동구 일대는 조선시대 광주군 구천면에 속했으며, &#x27;구천&#x27;이라는 지명은 성종 때 판중추부사를 지낸 어효첨의 호에서 비롯된 것으로 전해집니다. 이보다 훨씬 앞서 이 땅은 신석기시대부터 사람이 살던 곳으로, 1925년 을축년 대홍수 때 한강변 모래가 씻겨나가면서 암사동의 빗살무늬토기와 움집터가 세상에 드러나 선사 취락의 실체가 확인되었습니다. 백제 초기에는 위례성 세력권의 배후지로 온조왕 전설과 얽혀 있어, 오늘날 온조대왕문화체육관이라는 이름에도 그 기억이 남아 있습니다. 현대 행정구역으로서의 강동구는 1979년 10월 1일 강남구에서 분리되어 18개 행정동으로 신설되었고, &#x27;한강의 동쪽에 위치한다&#x27; 하여 강동(江東)이라는 구명을 얻었습니다. 1988년에는 남쪽 일부가 송파구로 다시 분리되어 오늘의 경계가 자리잡았습니다. 이후 둔촌주공·고덕주공 등 대규모 저층 아파트 단지가 조성되었고, 2020년대 들어 이들이 잇따라 재건축되며 인구 구조와 도시 경관이 크게 바뀌었습니다.</p>
+      </section>
+      <section id="geography">
+        <h2>지리·자연환경</h2>
+        <p>강동구는 서울의 최동단에 자리해 한강을 서쪽 경계로 광진구와 마주하고, 북쪽으로는 아차산 자락을 사이에 두고 경기도 구리시, 동쪽으로는 하남시, 남쪽으로는 송파구와 맞닿아 있습니다. 면적은 약 24.6㎢로, 한강 본류가 광나루에서 시작해 미사·강일 방향으로 크게 휘어 흐르며 넓은 저지대 충적평야를 남겨 예로부터 농경과 취락에 유리했습니다. 지형은 대체로 평탄하나 남동쪽으로 해발 130여 미터의 일자산이 하남·송파와의 경계를 따라 남북으로 길게 뻗어 있고, 북쪽에는 아차산과 고덕산의 낮은 구릉이 녹지축을 이룹니다. 고덕동 한강변에는 버드나무 군락과 습지로 이루어진 고덕수변생태공원이 있어 도심 속 자연 하천 생태를 보존합니다. 이처럼 한강의 물길과 일자산·아차산의 산줄기가 만나 강과 산이 도시를 감싸는 배산임수의 지세를 형성하고 있습니다.</p>
+      </section>
+      <section id="characteristics">
+        <h2>지역 특징</h2>
+        <p>강동구의 인구는 2023년 기준 약 45만 9천여 명으로, 둔촌·고덕 일대의 대규모 재건축 입주가 이어지며 서울에서 인구가 가장 빠르게 늘어나는 자치구 중 하나로 꼽힙니다. 전통적으로 천호동·성내동을 중심으로 한 상업 기능과 둔촌·고덕·명일의 주거 기능이 뚜렷이 나뉘어 있으며, 근래에는 고덕비즈밸리 자족업무단지가 조성되어 유통·지식산업센터 등 자족 기능이 강화되고 있습니다. 둔촌주공을 재건축한 올림픽파크포레온은 1만 2천여 세대로 국내 최대 아파트 단지라는 상징성을 지녀 강동구 부동산과 도시 개발의 중심축이 되었습니다. 강동경희대병원과 강동성심병원 등 대형 종합병원이 밀집해 서울 동부권 의료 거점 역할을 하며, 강동아트센터·온조대왕문화체육관 등 문화·체육 인프라도 촘촘합니다. 대체로 아파트 위주의 정주형 주거지 성격이 강하면서도, 선사문화라는 뚜렷한 지역 정체성을 도시 브랜드로 적극 활용하는 점이 다른 자치구와 구별됩니다.</p>
+      </section>
+      <section id="landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>서울 암사동 유적</strong> — 기원전 4000년경 신석기시대 한강변 최대 규모의 마을 유적으로, 사적 제267호이다. 복원된 움집과 빗살무늬토기 출토지를 갖춘 선사공원과 두 개의 박물관에서 6천 년 전 강동 사람들의 삶을 체험할 수 있다.</li>
+          <li><strong>올림픽파크포레온(둔촌주공 재건축)</strong> — 둔촌동에 들어선 총 1만 2천여 세대의 국내 최대 아파트 단지로, &#x27;단군 이래 최대 재건축&#x27;으로 불렸다. 올림픽공원과 인접해 있으며 강동구 도시 경관과 부동산 시장의 새로운 상징이 되었다.</li>
+          <li><strong>천호동 로데오거리</strong> — 천호역 일대에 형성된 강동구 최대의 상업·쇼핑 거리로, 패션 매장과 먹자골목, 대형 백화점이 밀집해 있다. 동부 서울의 대표적인 도심 상권으로 밤낮없이 활기가 넘친다.</li>
+          <li><strong>강동아트센터</strong> — 명일근린공원 자락 상일동에 위치한 전문 공연장으로 대극장·소극장과 갤러리를 갖추고 있다. 숲으로 둘러싸인 문화 공간에서 연극·무용·클래식 등 다양한 공연이 열린다.</li>
+        </ul>
+      </section>
+      <section id="heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>암사동 선사유적박물관</strong> — 암사동 유적 내에 자리한 신석기 전문 박물관으로, 빗살무늬토기·갈돌 등 출토 유물과 복원 움집을 전시한다. 유네스코 세계유산 등재를 추진하며 선사 취락 연구와 체험학습의 거점 역할을 한다.</li>
+          <li><strong>강동선사문화축제</strong> — 매년 가을 암사동 유적 일대에서 열리는 강동구 대표 브랜드 축제로, 서울에서 유일하게 선사시대를 주제로 삼는다. 불 피우기·토기 만들기 등 선사인의 생활을 재현한 체험 프로그램이 인기를 끈다.</li>
+          <li><strong>광주 이씨 광릉부원군파 묘역</strong> — 서울특별시 유형문화재로 지정된 조선시대 사대부 묘역으로, 강동구 일대에 세거한 광주 이씨 문중의 역사를 보여준다. 문인석과 묘비 등 조선 분묘 양식을 잘 간직하고 있다.</li>
+          <li><strong>온조대왕문화체육관</strong> — 백제 시조 온조왕의 이름을 딴 강동구 대표 실내체육·문화시설로 고덕로에 위치한다. 수영장과 대체육관, 공연이 가능한 다목적 공간을 갖춰 주민 생활체육과 문화 활동의 중심지가 된다.</li>
+        </ul>
+      </section>
+      <section id="nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>일자산 허브천문공원</strong> — 일자산 능선에 조성된 공원으로 허브원·자생원과 관천대, 전망데크를 갖추고 있다. 밤이면 바닥에 설치된 282개의 별자리 조명이 켜져 도심 속에서 별과 허브 향을 함께 즐길 수 있는 힐링 명소다.</li>
+          <li><strong>강동그린웨이(일자산 둘레길)</strong> — 일자산을 중심으로 둔촌동 생태경관보전지역, 허브천문공원, 길동생태공원을 잇는 약 3km의 숲길 둘레길이다. 울창한 참나무 숲 사이로 이어지는 완만한 흙길이라 남녀노소 걷기 좋은 산책 코스로 사랑받는다.</li>
+          <li><strong>광나루한강공원</strong> — 한강변 광나루지구에 조성된 시민공원으로 자전거도로, 잔디밭, 물놀이장과 서울시 유일의 자전거공원을 갖추고 있다. 아차산을 배경으로 한강을 조망하며 여가를 즐기기에 좋다.</li>
+          <li><strong>길동생태공원</strong> — 습지와 저수지, 초지가 어우러진 도심 생태 학습장으로 다양한 새와 곤충, 수생식물을 관찰할 수 있다. 예약제로 운영되는 자연 관찰 프로그램이 있어 어린이 환경 교육의 장으로 활용된다.</li>
+        </ul>
+      </section>
+      <section id="transport">
+        <h2>교통</h2>
+        <p>강동구는 서울 지하철 5호선이 관통하는 교통의 축으로, 5호선은 천호·강동·길동·굽은다리·명일·고덕역을 지나 상일동 방향 본선과 둔촌동 방향 마천지선으로 갈라집니다. 8호선은 암사역을 기점으로 강동구청역·천호역을 지나며, 이 가운데 천호역과 강동역은 각각 5·8호선과 5호선이 만나는 환승 거점입니다. 9호선은 둔촌오륜역과 중앙보훈병원역을 통해 강동 남부를 잇고, 5호선 상일동에서 이어지는 하남선 연장으로 하남 미사·풍산 방면 접근성도 크게 좋아졌습니다. 도로 교통은 천호대로와 올림픽대로가 동서를 관통하고, 강일IC를 통해 서울양양고속도로와 수도권제1순환고속도로로 직접 연결되어 수도권 동부 광역 이동이 편리합니다. 한강을 건너는 광진교와 천호대교가 광진구·성동 방면을 이어 강북 도심과의 접근성도 확보하고 있습니다.</p>
+      </section>
+      <section id="symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 매화</li>
+          <li>구목(나무): 잣나무</li>
+          <li>구조(새): 종달새</li>
+        </ul>
+      </section>
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>강동구를 대표하는 관광지는 어디인가요?</summary>
+            <p>6천 년 전 신석기 취락을 복원한 서울 암사동 유적이 가장 대표적입니다. 선사공원과 박물관에서 빗살무늬토기와 움집을 직접 볼 수 있고, 매년 가을에는 강동선사문화축제가 열립니다.</p>
+          </details>
+          <details>
+            <summary>강동구청은 어디에 있고 어떻게 가나요?</summary>
+            <p>강동구청은 성내동 성내로 25에 위치합니다. 서울 지하철 8호선 강동구청역에서 바로 연결되어 대중교통 접근이 편리합니다.</p>
+          </details>
+          <details>
+            <summary>올림픽파크포레온은 어떤 곳인가요?</summary>
+            <p>둔촌주공아파트를 재건축한 약 1만 2천 세대 규모의 국내 최대 아파트 단지입니다. 올림픽공원과 가까워 강동구 남부 주거·개발의 중심으로 꼽힙니다.</p>
+          </details>
+          <details>
+            <summary>강동구에서 가족과 산책하기 좋은 곳은 어디인가요?</summary>
+            <p>일자산 허브천문공원과 강동그린웨이 둘레길, 광나루한강공원이 대표적입니다. 허브천문공원은 밤에 별자리 조명이 켜져 야간 산책 명소로도 인기가 많습니다.</p>
+          </details>
+          <details>
+            <summary>강동구에는 어떤 지하철 노선이 지나나요?</summary>
+            <p>5호선, 8호선, 9호선이 지나며 천호역과 강동역이 주요 환승역입니다. 5호선 상일동에서 이어지는 하남선으로 하남 미사 방면 이동도 편리합니다.</p>
+          </details>
+          <details>
+            <summary>강동구 이름은 어떻게 유래했나요?</summary>
+            <p>1979년 강남구에서 분리 신설될 때 &#x27;한강의 동쪽에 위치한다&#x27;는 뜻에서 강동(江東)이라는 이름이 붙었습니다. 옛 지명은 조선시대 광주군 구천면이었습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.gangdong.go.kr" rel="noopener">강동구청 공식 홈페이지</a></li>
+          <li><a href="https://www.gangdong.go.kr/web/culture" rel="noopener">강동문화포털</a></li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EB%8F%99%EA%B5%AC" rel="noopener">강동구 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://ko.wikipedia.org/wiki/%EC%84%9C%EC%9A%B8_%EC%95%94%EC%82%AC%EB%8F%99_%EC%9C%A0%EC%A0%81" rel="noopener">서울 암사동 유적 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.gangdong.go.kr/web/culture/contents/gdc010_020_030" rel="noopener">일자산 허브천문공원 - 강동문화포털</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.gangdong.go.kr/web/newportal/contents/gdp_005_007_010_002_001" rel="noopener">고덕비즈밸리 사업개요 - 강동구청</a> (조회 2026-07-08)</li>
+        </ul>
+      </section> and remain in the DOM at all times -->
+        <div class="gd-content" id="gd-content-source">
+                <section id="intro">
         <h2>지역 소개</h2>
         <p>강동구는 한강이 서울을 빠져나가기 직전 마지막으로 감싸 도는 서울의 동쪽 관문으로, 기원전 4000년경 신석기인이 빗살무늬토기를 빚으며 첫 정착지를 이룬 암사동 유적의 고장입니다. 6천 년 전 강변 취락에서 시작된 삶의 흔적이 오늘날 1만 2천여 세대 규모의 초대형 아파트 단지 올림픽파크포레온과 한 지역 안에 공존하는, 선사와 첨단이 겹쳐진 독특한 도시입니다. 매화(구화)와 잣나무(구목), 종달새(구조)를 상징으로 삼아 강변의 온화함과 생태의 푸르름을 함께 담아냈습니다. 천호동 로데오거리의 활기, 고덕비즈밸리의 자족 업무단지, 강동경희대병원을 중심으로 한 의료 인프라가 어우러져 주거·상업·산업이 균형을 이룹니다. 서울 25개 자치구 가운데 가장 늦게까지 넓은 미개발지를 품고 있어 재건축과 도시재생으로 빠르게 변모하는 현재진행형의 구이기도 합니다.</p>
       </section>
@@ -253,10 +784,147 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
           <li><a href="https://www.gangdong.go.kr/web/newportal/contents/gdp_005_007_010_002_001" rel="noopener">고덕비즈밸리 사업개요 - 강동구청</a> (조회 2026-07-08)</li>
         </ul>
       </section>
+        </div>
+      </div>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 강동구 지역 정보 페이지입니다.</p>
-    </footer>
   </main>
+
+  <nav class="gd-controls" aria-label="책장 넘기기">
+    <button class="gd-btn" id="gd-prev" aria-label="이전 페이지">‹</button>
+    <span class="gd-progress" id="gd-progress" aria-live="polite">1 / 1</span>
+    <button class="gd-btn" id="gd-next" aria-label="다음 페이지">›</button>
+  </nav>
+
+  <div class="gd-chapters" id="gd-chapters" aria-label="목차"></div>
+
+  <p class="gd-hint">← → 방향키 · 좌우 클릭 · 스와이프로 책장을 넘길 수 있어요</p>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('gd-root');
+  var source = document.getElementById('gd-content-source');
+  if(!root || !source) return;
+
+  // Respect no-JS baseline: only enhance when we can build the book safely.
+  var sections = Array.prototype.slice.call(source.querySelectorAll('section'));
+  if(sections.length === 0) return; // leave stacked, fully-readable fallback
+
+  // --- Chapter labels from region-data (optional) + section headings ---
+  var pagesEl = document.getElementById('gd-pages');
+  var chaptersEl = document.getElementById('gd-chapters');
+  var progressEl = document.getElementById('gd-progress');
+  var prevBtn = document.getElementById('gd-prev');
+  var nextBtn = document.getElementById('gd-next');
+
+  // Build a cover page as leaf 0
+  var leaves = [];
+  var cover = document.createElement('div');
+  cover.className = 'gd-page';
+  cover.innerHTML =
+    '<div class="gd-page-inner" style="height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">' +
+      '<div class="gd-folio" style="justify-content:center;">서울특별시</div>' +
+      '<h2 style="font-size:clamp(2rem,6vw,3.4rem);color:var(--gd-green);border:none;padding:0;">강동구</h2>' +
+      '<p style="max-width:34ch;color:var(--gd-brown);">한강과 암사, 고덕의 숲길까지 —<br>강동구의 이야기를 펼쳐 봅니다.</p>' +
+      '<p style="font-family:Quicksand,sans-serif;letter-spacing:.3em;font-size:.72rem;color:var(--gd-brown);opacity:.7;">▶ 책장을 넘기세요</p>' +
+    '</div>';
+  leaves.push({el:cover, label:'표지'});
+
+  // Move each section onto its own leaf/page
+  sections.forEach(function(sec, i){
+    var page = document.createElement('div');
+    page.className = 'gd-page';
+    var inner = document.createElement('div');
+    inner.className = 'gd-page-inner';
+    var h = sec.querySelector('h2');
+    var folio = document.createElement('div');
+    folio.className = 'gd-folio';
+    folio.textContent = (i+1 < 10 ? '0'+(i+1) : (i+1)) + ' · ' + ((sec.id||'').toUpperCase());
+    inner.appendChild(folio);
+    inner.appendChild(sec); // relocate the real section node (kept in DOM => SEO safe)
+    page.appendChild(inner);
+    leaves.push({el:page, label: h ? h.textContent.replace(/\s+/g,' ').trim() : ('장 '+(i+1)), id:sec.id});
+  });
+
+  // Wrap remaining content-source children (if any non-section nodes) — append to last page
+  // (sections were moved out; source may now be empty)
+
+  // Rebuild DOM: clear source wrapper, append leaves into pages container
+  source.parentNode.removeChild(source);
+  leaves.forEach(function(l){ pagesEl.appendChild(l.el); });
+
+  // Switch to enhanced mode
+  root.classList.remove('gd-nojs');
+  root.classList.add('gd-js');
+
+  var total = leaves.length;
+  var idx = 0;
+
+  function render(){
+    leaves.forEach(function(l, i){
+      l.el.classList.toggle('is-flipped', i < idx);
+      l.el.classList.toggle('is-current', i === idx);
+    });
+    progressEl.textContent = (idx+1) + ' / ' + total;
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx === total-1;
+    Array.prototype.forEach.call(chaptersEl.children, function(c, i){
+      // chip 0 => cover(leaf0); chip i => leaf i
+      c.classList.toggle('active', i === idx);
+    });
+    // scroll current page to top for a fresh read
+    if(leaves[idx]) leaves[idx].el.scrollTop = 0;
+  }
+
+  function go(n){ idx = Math.max(0, Math.min(total-1, n)); render(); }
+  function next(){ go(idx+1); }
+  function prev(){ go(idx-1); }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // Chapters / table of contents
+  leaves.forEach(function(l, i){
+    var chip = document.createElement('button');
+    chip.className = 'gd-chip';
+    chip.type = 'button';
+    chip.textContent = l.label.length > 14 ? l.label.slice(0,13)+'…' : l.label;
+    chip.title = l.label;
+    chip.addEventListener('click', function(){ go(i); });
+    chaptersEl.appendChild(chip);
+  });
+
+  // Keyboard
+  root.setAttribute('tabindex','-1');
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight'){ next(); }
+    else if(e.key === 'ArrowLeft'){ prev(); }
+  });
+
+  // Click on page halves to turn (ignore clicks on links / interactive & when text selected)
+  pagesEl.addEventListener('click', function(e){
+    if(e.target.closest('a, summary, button, details, input')) return;
+    if(window.getSelection && String(window.getSelection())) return;
+    var r = pagesEl.getBoundingClientRect();
+    if((e.clientX - r.left) > r.width/2){ next(); } else { prev(); }
+  });
+
+  // Touch swipe
+  var sx=0, sy=0, tracking=false;
+  pagesEl.addEventListener('touchstart', function(e){
+    var t=e.changedTouches[0]; sx=t.clientX; sy=t.clientY; tracking=true;
+  }, {passive:true});
+  pagesEl.addEventListener('touchend', function(e){
+    if(!tracking) return; tracking=false;
+    var t=e.changedTouches[0];
+    var dx=t.clientX-sx, dy=t.clientY-sy;
+    if(Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)){
+      if(dx < 0) next(); else prev();
+    }
+  }, {passive:true});
+
+  render();
+})();
+</script>
 </body>
 </html>
